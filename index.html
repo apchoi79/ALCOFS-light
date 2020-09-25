@@ -45,7 +45,7 @@ ol > li:before {
 <h2>UPDATES</h2>
 <ul class = "a">
 <!-- <li>Updated on 05-05-2020: Due to there are not free cores today, the simulation results haven't been updated yet. </li> -->
-<!--<li>Updated on 05-15-2020: Due to the computer maintenance from May 15 to 17, during this period the forecast results will not be updated.</li>-->
+<li>Updated on 09-24-2020: The Wave forecast results on Global and Regional are published. (Water level forecasts are undwer construction)</li>-->
 <li>Established on 07-15-2020: Light unstructured mesh, forecast two time per day (Base on at GMT 00:00 and 12:00 everyday automatically).</li>
 <li>Generated on early May : Light unstructed mesh was generated for various purposes with several collabrators.
 </ul>
@@ -53,24 +53,35 @@ ol > li:before {
 <h2>Overview</h2>
 <p>Due to the recent global weather changes, increasing water level along the coast of Alaska has been exposed by unexpected storms and experienced more critical events during winter season due to the ice effects (<a href="https://slosh.nws.noaa.gov/docs/Shaffer1997StormSurgesInTheRegion.pdf" target="_blank">[1]</a>, <a href="https://www.commerce.alaska.gov/web/Portals/4/pub/2009_USACE_Storm_Damage_Flooding_Evaluation.pdf" target="_blank">[2]</a>). The main purpose of Alaska Storm Surge forecasting system is to provide FAST and AT LEAST 5 days forecasts to communites with further circumstances. In this system, the <a href="https://adcirc.org/" target="_blank">ADCIRC [3]</a> well known water circulation model has been adapted as a main engine and incorporated Alaskan forcing fuctions for predicting water level in several circumstances.</p>
 <h2>How the forecasting system works</h2>
-<p>The flowchart discribed this forecasting system WILL BE UPDATED. <p>
+<p>The flowchart discribed this forecasting system WILL BE UPDATED without any notice. In order to figure out storm surge effect on Alaskan water, this forecasting system now is using only one way coupling to both models.<p>
+<p>Since regional shell has been developed, global WAVEWATCH3 model run first to impose south and north boundary conditions on regional shell. Once gloabl simulation has done, Significant Wave Height (SWH) on global field is generated and uploaded. (See Figure 4.) <p>
+<p>Global WW3 also provide boundary conditions to south and north boundary of regional shell, regional forecasting system for waves will run for 5 days.<p>
+<p>Regional WW3 will publish SWH on regional Alaskan water (Figure 3.) and be source of wave radiation stress provding to main engine "ADCIRC" (NOW COUPLING, UNDERCONSTRUCTION)<p>
+            
 <figure>
 <img src="Flow Chart.png" alt="hi" class="inline"/> 
-<figcaption>Figure. ALCOFS Forecast Flowchart</figcaption>
+<figcaption>Figure 1. ALCOFS Forecast Flowchart</figcaption>
 </figure>
 
+<h2>Alaskan Water Water Surface Elevation Forecasts</h2>
+<p>ADCIRC</a>.</p>            
+<figure>
+<img src="ak_wsl.gif" alt="hi" class="inline"/> 
+<figcaption>Figure 3. Alaskan Water level Forecasts</figcaption>
+</figure>
+            
 <h2>Alaskan Water Wave Forecasts</h2>
 <p>WAVEWATCH3</a>.</p>            
 <figure>
 <img src="ak_swh.gif" alt="hi" class="inline"/> 
-<figcaption>Figure. Alaskan Water Wave Forecasts</figcaption>
+<figcaption>Figure 3. Alaskan Water Wave Forecasts</figcaption>
 </figure>
 
 <h2>Global Wave Forecasts</h2>
 <p>WAVEWATCH3</a>.</p>            
 <figure>
 <img src="swh.gif" alt="hi" class="inline"/> 
-<figcaption>Figure. Global Wave Forecasts</figcaption>
+<figcaption>Figure 4. Global Wave Forecasts</figcaption>
 </figure>
 
 <h2>Light Mesh Developed</h2>
@@ -81,7 +92,7 @@ ol > li:before {
 
 <figure>
 <img src="Light_mesh.gif" alt="hi" class="inline"/> 
-<figcaption>Figure. Unstructured triangular mesh, mesh resolution and mesh bathymetry</figcaption>
+<figcaption>Figure 5. Unstructured triangular mesh, mesh resolution and mesh bathymetry</figcaption>
 </figure>
 
 <h2>Forcing Functions</h2>
@@ -100,8 +111,7 @@ NOAA GFS forecast products (<a href="https://www.ftp.ncep.noaa.gov/data/nccf/com
   <li>Brian R. Joyce, William J. Pringle, Damrongsak Wirasaet, Joannes J. Westerink, Andre J. Van der Westhuysen, Robert Grumbine, Jesse Feyenc: High resolution modeling of western Alaskan tides and storm surge under varying sea ice conditions, Ocean Modelling, Vol.141, 101421, 2019.</li>
   <li>Christof Lüpkes, Vladimir M. Gryanik, Jörg Hartmann, and Edgar L Andreas: A parametrization, based on sea ice morphology, of the neutral atmospheric drag coefficients for weather prediction and climate models, Journal of Geophysical Research, Vol.117, D13112, 2012.</li>
   <li>G. Ling, D. Wirasaet, J. Westerink, D. H. Richter, B. Joyce, W. Pringle, M. T. Contreras Vargas, Mindo Choi, K. R. Steffen, C. N. Dawson, A. Fujisaki-Manome, E. Myers, S. Moghimi, S. V. Vinogradov, A. Van der Westhuysen, A. Abdolali, and R. Grumbine: Studies on Parameterizations of Sea Ice Effect in a Storm Surge Model for Western Alaska, <a href="https://ams.confex.com/ams/2020Annual/videogateway.cgi/id/520392?recordingid=520392" target="_blank">https://ams.confex.com/ams/2020Annual/videogateway.cgi/id/520392?recordingid=520392</a>, AMS, 2020.</li>
-  <li>GLOCOFFS (GLObal Coastal Ocean Flood Forecasting System): <a href="https://wpringle.github.io/GLOCOFFS/" target="_blank">https://wpringle.github.io/GLOCOFFS/</a>.</li>
-  <li>ALCOFS-R (Alaska Coastal Ocean Forecast System - Regional): <a href="https://gm-ling.github.io/AKSSFS/" target="_blank">https://gm-ling.github.io/AKSSFS/</a>.</li>
+  <li>GLOCOFFS (GLObal Coastal Ocean Flood Forecasting System): <a href="https://wpringle.github.io/GLOCOFFS/" target="_blank">https://wpringle.github.io/GLOCOFFS/</a>.</li>  
 </ol>
 </p>
 </body>
